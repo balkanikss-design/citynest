@@ -25,7 +25,7 @@ export function Contact() {
         <div className="container-home relative z-10 grid min-h-[50vh] items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20 -translate-y-[20px]">
           <div className="max-w-xl">
             <motion.p
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-brand mb-4"
+              className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-light mb-4 drop-shadow-[0_1px_6px_rgba(15,23,42,0.8)]"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -34,7 +34,7 @@ export function Contact() {
             </motion.p>
             <motion.h1
               id="contact-hero-heading"
-              className="font-display text-4xl font-semibold leading-[1.1] text-charcoal sm:text-5xl md:text-6xl lg:text-[2.75rem]"
+              className="font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl md:text-6xl lg:text-[2.75rem] drop-shadow-[0_12px_32px_rgba(15,23,42,0.9)]"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -42,7 +42,7 @@ export function Contact() {
               Contact City Nest Solutions.
             </motion.h1>
             <motion.p
-              className="mt-6 text-lg leading-relaxed text-mid-grey"
+              className="mt-6 text-lg leading-relaxed text-white/90 drop-shadow-[0_10px_30px_rgba(15,23,42,0.9)]"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
