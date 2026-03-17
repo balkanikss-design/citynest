@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-charcoal: #263435;
+    --color-graphite: #111819;
+    --color-mid-grey: #6d7675;
+    --color-steel-grey: #8a9291;
+    --color-brand: #ae7c58;
+    --color-brand-secondary: #263435;
+    --color-accent: #6d7675;
+    --color-page: #f5f6f7;
+    --color-surface: #ffffff;
+    --radius-btn: 999px;
+    --radius-card: 24px;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'DM Sans', system-ui, sans-serif;
+    --shadow-glow: 0 0 110px -40px rgba(174, 124, 88, 0.85);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-page);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    transform: translateY(-100%);
+    border-radius: var(--radius-btn);
+    background-color: var(--color-charcoal);
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: transform 0.2s;
+    z-index: 50;
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-btn bg-brand px-6 py-3 font-medium text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-50;
+  }
+  .btn-primary:hover:not(:disabled) {
+    filter: brightness(1.05);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-btn border border-charcoal/25 px-6 py-3 font-medium text-charcoal transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-50;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    border-color: var(--color-brand);
+    background-color: rgba(174, 124, 88, 0.06);
+    color: var(--color-brand);
+  }
+
+  .link-underline {
+    @apply text-brand underline decoration-brand/40 underline-offset-4 transition-colors duration-300;
+  }
+  .link-underline:hover {
+    text-decoration-color: var(--color-brand);
+    color: var(--color-brand-dark);
+  }
+
+  .section-padding-home {
+    @apply py-20 sm:py-24 md:py-28 lg:py-32;
+  }
+
+  .container-home {
+    @apply mx-auto w-full max-w-[1440px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24;
+  }
+
+  .hero-bg {
+    background:
+      radial-gradient(150% 120% at 0% 0%, rgba(174, 124, 88, 0.16), transparent 60%),
+      radial-gradient(130% 120% at 100% 0%, rgba(38, 52, 53, 0.22), transparent 55%),
+      radial-gradient(120% 150% at 50% 100%, rgba(0, 0, 0, 0.68), #050708);
+  }
+
+  .home-hero {
+    background:
+      radial-gradient(140% 120% at 0% 0%, rgba(174, 124, 88, 0.18), transparent 60%),
+      radial-gradient(120% 130% at 100% 0%, rgba(38, 52, 53, 0.28), transparent 55%),
+      radial-gradient(120% 150% at 50% 100%, rgba(3, 7, 9, 0.94), #050708);
+  }
+
+  .home-hero-mesh {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 90% 70% at 18% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 50% at 82% 70%, rgba(174, 124, 88, 0.26) 0%, transparent 48%),
+      radial-gradient(ellipse 100% 80% at 50% 100%, rgba(0, 0, 0, 0.58) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-2xl border border-white/60 shadow-card;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand via-brand-secondary to-brand bg-clip-text text-transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
