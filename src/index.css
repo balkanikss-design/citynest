@@ -120,6 +120,50 @@
   .gradient-text {
     @apply bg-gradient-to-r from-brand via-brand-secondary to-accent bg-clip-text text-transparent;
   }
+
+  .legal-prose {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--color-charcoal);
+  }
+
+  .legal-prose h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .legal-prose h2::before {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--color-brand);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .legal-prose p {
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  .legal-prose ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .legal-prose li {
+    margin: 0.35rem 0;
+    line-height: 1.65;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

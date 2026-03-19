@@ -1,8 +1,4 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import { LegalModal } from './LegalModal'
-import { privacyPolicyContent, termsOfServiceContent, recruitmentPrivacyContent } from '../data/legal'
 
 const quickLinks = [
   { to: '/', label: 'Home' },
@@ -21,20 +17,18 @@ const serviceLinks = [
   { to: '/services#performance', label: 'Performance frameworks' },
 ]
 
-function LegalFooterLink({ label, onClick }: { label: string; onClick: () => void }) {
+function LegalFooterLink({ to, label }: { to: string; label: string }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
+    <Link
+      to={to}
       className="text-mid-grey transition-colors duration-300 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
     >
       {label}
-    </button>
+    </Link>
   )
 }
 
 export function Footer() {
-  const [legalModal, setLegalModal] = useState<'privacy' | 'terms' | 'recruitment' | null>(null)
   return (
     <footer
       className="border-t border-charcoal/5 bg-surface/95 backdrop-blur-xl"
@@ -116,39 +110,12 @@ export function Footer() {
             © {new Date().getFullYear()} City Nest Solutions. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-6 text-xs">
-            <LegalFooterLink
-              label="Privacy policy"
-              onClick={() => setLegalModal('privacy')}
-            />
-            <LegalFooterLink
-              label="Terms of service"
-              onClick={() => setLegalModal('terms')}
-            />
-            <LegalFooterLink
-              label="Recruitment Privacy Notice"
-              onClick={() => setLegalModal('recruitment')}
-            />
+            <LegalFooterLink to="/privacy" label="Privacy policy" />
+            <LegalFooterLink to="/terms" label="Terms of service" />
+            <LegalFooterLink to="/recruitment-privacy-notice" label="Recruitment Privacy Notice" />
           </div>
         </div>
       </div>
-
-      <AnimatePresence mode="wait">
-        {legalModal === 'privacy' && (
-          <LegalModal key="privacy" title="Privacy policy" onClose={() => setLegalModal(null)}>
-            {privacyPolicyContent}
-          </LegalModal>
-        )}
-        {legalModal === 'terms' && (
-          <LegalModal key="terms" title="Terms of service" onClose={() => setLegalModal(null)}>
-            {termsOfServiceContent}
-          </LegalModal>
-        )}
-        {legalModal === 'recruitment' && (
-          <LegalModal key="recruitment" title="Recruitment Privacy Notice" onClose={() => setLegalModal(null)}>
-            {recruitmentPrivacyContent}
-          </LegalModal>
-        )}
-      </AnimatePresence>
     </footer>
   )
 }

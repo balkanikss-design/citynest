@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 export const privacyPolicyContent: ReactNode = (
-  <div className="prose prose-sm max-w-none text-left text-charcoal">
+  <div className="legal-prose text-left">
     <p>
       This notice explains how City Nest Solutions (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) collects and
       uses personal information in the course of our management consultancy work.
@@ -42,7 +42,7 @@ export const privacyPolicyContent: ReactNode = (
 )
 
 export const termsOfServiceContent: ReactNode = (
-  <div className="prose prose-sm max-w-none text-left text-charcoal">
+  <div className="legal-prose text-left">
     <p>
       These terms set out the basis on which City Nest Solutions provides management consultancy services.
       They sit alongside, and are supplemented by, any specific proposal, statement of work or engagement
@@ -73,7 +73,7 @@ export const termsOfServiceContent: ReactNode = (
 )
 
 export const recruitmentPrivacyContent: ReactNode = (
-  <div className="prose prose-sm max-w-none text-left text-charcoal">
+  <div className="legal-prose text-left">
     <p>
       If you apply for a role with City Nest Solutions we will process the information you provide in order to
       assess your application and manage the recruitment process.

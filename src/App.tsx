@@ -13,6 +13,8 @@ import { StartProject } from './pages/StartProject'
 import { Careers } from './pages/Careers'
 import { FAQ } from './pages/FAQ'
 import { Privacy } from './pages/Privacy'
+import { Terms } from './pages/Terms'
+import { RecruitmentPrivacyNotice } from './pages/RecruitmentPrivacyNotice'
 import { Cookies } from './pages/Cookies'
 import { NotFound } from './pages/NotFound'
 
@@ -33,6 +35,8 @@ function App() {
         <Route path="careers" element={<Careers />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="recruitment-privacy-notice" element={<RecruitmentPrivacyNotice />} />
         <Route path="cookies" element={<Cookies />} />
         <Route path="*" element={<NotFound />} />
       </Route>
