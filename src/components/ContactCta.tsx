@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 export function ContactCta() {
   return (
     <section className="relative overflow-hidden bg-charcoal text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(174,124,88,0.35),transparent_55%),radial-gradient(circle_at_100%_0%,rgba(255,255,255,0.1),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(55,179,230,0.28),transparent_55%),radial-gradient(circle_at_100%_0%,rgba(123,199,186,0.2),transparent_55%)]" />
       <div className="container-home relative z-10 py-16 sm:py-20 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-7 space-y-4">

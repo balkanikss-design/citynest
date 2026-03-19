@@ -17,18 +17,18 @@ export default {
         page: '#f5f6f7',
         surface: '#ffffff',
         brand: {
-          DEFAULT: '#ae7c58',
-          light: '#c8956f',
-          dark: '#8f6344',
-          muted: 'rgba(174, 124, 88, 0.14)',
+          DEFAULT: '#37b3e6',
+          light: '#7bc7ba',
+          dark: '#2a92bd',
+          muted: 'rgba(55, 179, 230, 0.14)',
         },
         'brand-secondary': {
-          DEFAULT: '#263435',
-          light: '#3a4a4c',
-          dark: '#141d1e',
-          muted: 'rgba(38, 52, 53, 0.12)',
+          DEFAULT: '#7bc7ba',
+          light: '#9dd4ca',
+          dark: '#5fb5a8',
+          muted: 'rgba(123, 199, 186, 0.18)',
         },
-        accent: '#6d7675',
+        accent: '#f4836a',
       },
       fontFamily: {
         sans: ['Inter', 'var(--font-sans)', 'system-ui', 'sans-serif'],
@@ -46,17 +46,17 @@ export default {
       },
       backgroundImage: {
         linework:
-          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(174, 124, 88, 0.08), transparent)',
+          'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(55, 179, 230, 0.1), transparent)',
         'hero-pattern':
-          'linear-gradient(135deg, rgba(174, 124, 88, 0.06) 0%, transparent 50%)',
+          'linear-gradient(135deg, rgba(55, 179, 230, 0.08) 0%, rgba(123, 199, 186, 0.06) 45%, transparent 70%)',
       },
       boxShadow: {
         card:
           '0 18px 45px -20px rgb(16 24 40 / 0.25), 0 0 0 1px rgb(15 23 42 / 0.06)',
         'card-hover':
-          '0 26px 80px -24px rgb(15 23 42 / 0.45), 0 0 0 1px rgb(174 124 88 / 0.35)',
+          '0 26px 80px -24px rgb(15 23 42 / 0.45), 0 0 0 1px rgb(55 179 230 / 0.35)',
         header: '0 1px 0 0 rgb(15 23 42 / 0.06)',
-        glow: '0 0 110px -40px rgb(174 124 88 / 0.85)',
+        glow: '0 0 110px -40px rgb(55 179 230 / 0.55)',
       },
     },
   },
